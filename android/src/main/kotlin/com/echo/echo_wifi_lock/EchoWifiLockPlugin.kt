@@ -33,7 +33,7 @@ class EchoWifiLockPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
 //  private var echoContext: Context? = null
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "echo_wifi_lock")
+    channel = MethodChannel(flutterPluginBinding.binaryMessenger, CHANNEL)
     channel.setMethodCallHandler(this)
     context = flutterPluginBinding.applicationContext
 

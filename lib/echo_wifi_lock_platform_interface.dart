@@ -28,19 +28,23 @@ abstract class EchoWifiLockPlatform extends PlatformInterface {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Future<String> sayHello(){
+  Future<String> sayHello() {
     throw UnimplementedError('sayHello() has not been implemented.');
   }
 
-  Future<void> acquire(EchoWifiMode echoWifiMode)async{
+  Future<void> acquire(EchoWifiMode echoWifiMode) async {
     throw UnimplementedError('acquire() has not been implemented.');
   }
 
-  Future<void> release()async{
+  Future<void> release() async {
     throw UnimplementedError('release() has not been implemented.');
   }
 
-  Future<bool> isHeld()async{
+  Future<bool> isHeld() async {
     throw UnimplementedError('isHeld() has not been implemented.');
+  }
+
+  Future<bool> getCurrentLocation()async{
+    throw UnimplementedError('getCurrentLocation() has not been implemented.');
   }
 }

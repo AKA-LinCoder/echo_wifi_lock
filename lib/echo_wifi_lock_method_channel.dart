@@ -12,34 +12,31 @@ class MethodChannelEchoWifiLock extends EchoWifiLockPlatform {
 
   @override
   Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
+    final version =
+        await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
   }
 
   @override
-  Future<String> sayHello() async{
+  Future<String> sayHello() async {
     final result = await methodChannel.invokeMethod<String>('hello');
-    return result??'hi';
+    return result ?? 'hi';
   }
 
   @override
-  Future<void> acquire(EchoWifiMode echoWifiMode) async{
-    final result =  await methodChannel.invokeMethod('acquire',{'type':echoWifiMode.value});
+  Future<void> acquire(EchoWifiMode echoWifiMode) async {
+    await methodChannel.invokeMethod('acquire', {'type': echoWifiMode.value});
     // return result??false;
   }
 
   @override
-  Future<void> release()async {
+  Future<void> release() async {
     await methodChannel.invokeMethod('release');
   }
 
   @override
-  Future<bool> isHeld() async{
-    final result =  await methodChannel.invokeMethod<bool>('isHeld');
-    return result??false;
+  Future<bool> isHeld() async {
+    final result = await methodChannel.invokeMethod<bool>('isHeld');
+    return result ?? false;
   }
-
-
 }
-
-

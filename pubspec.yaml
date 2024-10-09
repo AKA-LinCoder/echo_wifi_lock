@@ -1,7 +1,7 @@
 name: echo_wifi_lock
 description: wifiLock work in Android
 version: 0.0.1
-homepage:
+homepage: https://github.com/AKA-LinCoder/echo_wifi_lock
 
 environment:
   sdk: '>=3.1.5 <4.0.0'
